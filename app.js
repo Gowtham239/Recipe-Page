@@ -7,5 +7,16 @@ const recipe = {
 const recipeHeading = document.getElementById("recipeHeading");
 recipeHeading.textContent = recipe.title;
 
-const image = document.getElementsByTagName("img");
-image.src = recipe.imageSrc;
+const imageContainer = document.getElementById("imageContainer");
+const image = document.createElement("img")
+image.setAttribute("src", recipe.imageSrc);
+image.className = "image";
+imageContainer.appendChild(image);
+
+const ingredientsList = document.getElementById("ingredientsList");
+for(let list of recipe.ingredients) {
+    let listItem = document.createElement("li");
+    listItem.className = "list-item";
+    listItem.textContent = list;
+    ingredientsList.appendChild(listItem)    
+}
