@@ -7,6 +7,5 @@ const recipe = {
 const recipeHeading = document.getElementById("recipeHeading");
 recipeHeading.textContent = recipe.title;
 
-const imageContainer = document.getElementById("imageContainer");
 const image = document.getElementsByTagName("img");
 image.src = recipe.imageSrc;
